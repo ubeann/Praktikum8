@@ -14,7 +14,7 @@ import java.util.concurrent.Executors
 
 class SimpleThreadActivity : AppCompatActivity() {
     // Setup variable
-    private val title:String = "Pilih Menu"
+    private val title:String = "Thread Sederhana"
     private var progressPercentage:Int = 0
     private lateinit var progressBar: CircularProgressIndicator
     private lateinit var progressText: TextView

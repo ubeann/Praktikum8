@@ -7,15 +7,24 @@
     <string name="register">Daftar</string>
     <string name="email">Email</string>
     <string name="loading">Loading %d%%</string>
-    <string name="selamat_datang_login">Berhasil login dengan username %s </string>
-    <string name="selamat_datang_register">Berhasil mendaftar dengan email %s </string>
+    <string name="loading_nominal">Loading %1$d%% (%2$d/%3$d)</string>
+    <string name="loading_no_text">Loading…</string>
+    <string name="selamat_datang_login">Berhasil login dengan username <b>%s</b></string>
+    <string name="selamat_datang_register">Berhasil mendaftar dengan email <b>%s</b></string>
     <string name="kembali">Kembali</string>
     <string name="_1_thread_sederhana">1. Thread Sederhana</string>
-    <string name="http_connection">2. HTTP CONNECTION</string>
+    <string name="_2_http_connection">2. HTTP CONNECTION</string>
     <string name="_3_progress_bar">3. Progress Bar</string>
     <string name="_4_thread_login">4. Thread Login</string>
     <string name="child_thread">Child Thread</string>
     <string name="child_thread_created">Child thread berhasil dibuat</string>
     <string name="child_thread_success">Child thread telah selesai dijalankan</string>
     <string name="child_thread_error">Child thread mengalami error dan diberhentikan</string>
+    <string name="get_image">Get Image</string>
+    <string name="maximum_value">Maximum Value</string>
+    <string name="increment_by">Increment by</string>
+    <string name="start">Start</string>
+    <string name="accept">Okay</string>
+    <string name="title_progress_bar">ProgressBar Selesai Dijalankan</string>
+    <string name="text_progress_bar">ProgressBar telah selesai dijalankan dengan MaxValue bernilai <b>%1$d</b> serta Increment by <b>%2$d</b></string>
 </resources>

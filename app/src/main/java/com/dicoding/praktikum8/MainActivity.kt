@@ -1,11 +1,13 @@
 package com.dicoding.praktikum8
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -15,7 +17,7 @@ import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
     // Setup variable
-    private val title:String = "Selamat Datang"
+    private val title:String = "Thread Login"
     private var progressPercentage:Int = 0
     private lateinit var progressBar:ProgressBar
     private lateinit var progressText:TextView
@@ -51,12 +53,16 @@ class MainActivity : AppCompatActivity() {
         username = findViewById(R.id.username)
         password = findViewById(R.id.password)
         btnLogin.setOnClickListener {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            imm?.hideSoftInputFromWindow(it.windowToken, 0)
             createThread("login")
         }
 
         // Set register
         email = findViewById(R.id.email)
         btnRegister.setOnClickListener {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            imm?.hideSoftInputFromWindow(it.windowToken, 0)
             createThread("daftar")
         }
     }
@@ -92,9 +98,9 @@ class MainActivity : AppCompatActivity() {
                             settingButton(true)
                             val intent = Intent(this@MainActivity, DetailActivity::class.java)
                             if (type === "login") {
-                                intent.putExtra(DetailActivity.TEXT, username.editText?.text.toString())
+                                intent.putExtra(DetailActivity.TEXT, if (username.editText?.text.toString() == "") "Jali" else username.editText?.text.toString())
                             } else {
-                                intent.putExtra(DetailActivity.TEXT, email.editText?.text.toString())
+                                intent.putExtra(DetailActivity.TEXT, if (email.editText?.text.toString() == "") "jaliku@unair.ac.id" else email.editText?.text.toString())
                             }
                             intent.putExtra(DetailActivity.TYPE, type)
                             startActivity(intent)
