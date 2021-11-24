@@ -10,4 +10,12 @@
     <string name="selamat_datang_login">Berhasil login dengan username %s </string>
     <string name="selamat_datang_register">Berhasil mendaftar dengan email %s </string>
     <string name="kembali">Kembali</string>
+    <string name="_1_thread_sederhana">1. Thread Sederhana</string>
+    <string name="http_connection">2. HTTP CONNECTION</string>
+    <string name="_3_progress_bar">3. Progress Bar</string>
+    <string name="_4_thread_login">4. Thread Login</string>
+    <string name="child_thread">Child Thread</string>
+    <string name="child_thread_created">Child thread berhasil dibuat</string>
+    <string name="child_thread_success">Child thread telah selesai dijalankan</string>
+    <string name="child_thread_error">Child thread mengalami error dan diberhentikan</string>
 </resources>
