@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dicoding.praktikum8">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
@@ -11,9 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praktikum8">
         <activity
-            android:name=".SimpleThreadActivity"
-            android:exported="false" />
-        <activity
             android:name=".LandingActivity"
             android:exported="true">
             <intent-filter>
@@ -22,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HttpConnectionActivity"
+            android:exported="true"
+            android:parentActivityName=".LandingActivity" />
+        <activity
+            android:name=".SimpleThreadActivity"
+            android:exported="true"
+            android:parentActivityName=".LandingActivity" />
         <activity
             android:name=".DetailActivity"
             android:exported="true"

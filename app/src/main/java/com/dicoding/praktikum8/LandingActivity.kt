@@ -28,6 +28,13 @@ class LandingActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Set button 2 HTTP Connection
+        btn2http = findViewById(R.id.landing_2)
+        btn2http.setOnClickListener {
+            val intent = Intent(this@LandingActivity, HttpConnectionActivity::class.java)
+            startActivity(intent)
+        }
+
         // Set button 4 login
         btn4login = findViewById(R.id.landing_4)
         btn4login.setOnClickListener {
